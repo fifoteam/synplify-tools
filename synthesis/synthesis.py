@@ -26,6 +26,7 @@ with open("c:\\ue\\synplify\\synthesis.tcl","w") as f:
 	f.write("project -new D:/tools/Synopsys/fpga_J-2015.03/bin/mbin/proj_1.prj\r\n")
 	f.write("project -save proj_1 c:/ue/synplify/proj_1.prj \r\n")
 	f.write("add_file -verilog "+path_list+"\r\n")
+	f.write("set_option -part XC7A100T\r\n")
 	f.write("set_option -grade -2\r\n")
 	f.write("set_option -package FGG484\r\n")
 	f.write("set_option -enable_nfilter 1\r\n")
