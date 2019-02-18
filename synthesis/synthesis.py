@@ -29,6 +29,7 @@ with open("c:\\ue\\synplify\\synthesis.tcl","w") as f:
 	f.write("set_option -grade -2\r\n")
 	f.write("set_option -package FGG484\r\n")
 	f.write("set_option -enable_nfilter 1\r\n")
+	f.write("project -log_file c:/ue/synplify/rev_2/proj_1.srr\r\n")
 	f.write("set_option -top_module "+verilog_name_only+"\r\n")
 	f.write("project -save proj_1 c:/ue/synplify/proj_1.prj \r\n")
 	f.write("project -run  -bg \r\n")
@@ -36,7 +37,7 @@ with open("c:\\ue\\synplify\\synthesis.tcl","w") as f:
 ##	-------------------------------------------------------------------------------------
 ##	用批处理的方式，调用synplify的命令行
 ##	-------------------------------------------------------------------------------------
-os.system("d:\\tools\\Synopsys\\fpga_J-2015.03\\bin\\mbin\\synplify.exe -batch synthesis.tcl")
+os.system("d:\\tools\\Synopsys\\fpga_J-2015.03\\bin\\mbin\\synplify.exe -batch c:\\ue\\synplify\\synthesis.tcl ")
 
 ##	-------------------------------------------------------------------------------------
 ##	打开synplify综合之后的log日志
